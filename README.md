@@ -8,7 +8,7 @@ Only source code is published. Subject scans, DICOM metadata, reports, and instr
 
 | Script | Purpose |
 | --- | --- |
-| `task1-3.m` | Compare single-peak and multi-peak signal models; fit noisy simulated signals with multiple starts |
+| `task1_3.m` | Compare single-peak and multi-peak signal models; fit noisy simulated signals with multiple starts |
 | `task7.m` | Explore separate water/fat R2* estimates over a simulated amplitude grid |
 | `advanced.m` | Compare squared-error and Rician likelihood objectives on simulated signals |
 | `task4.m` | Optional DICOM loading and voxel-wise fitting, with input supplied locally |

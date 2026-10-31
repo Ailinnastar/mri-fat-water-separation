@@ -1,4 +1,4 @@
-%Task 1
+% Tasks 1 to 3: signal simulation and multi-start fitting.
 
 T    = (0:0.001:0.010)';
 am_w = 1;          % water amplitude
