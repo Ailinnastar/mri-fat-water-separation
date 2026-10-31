@@ -1,0 +1,21 @@
+name: Synthetic MATLAB simulations
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  simulations:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: matlab-actions/setup-matlab@v3
+        with:
+          release: R2024b
+          products: Optimization_Toolbox
+      - uses: matlab-actions/run-command@v3
+        with:
+          command: set(0, 'DefaultFigureVisible', 'off'); run_simulations; assert(isfile('fig/task3_analysis.png')); assert(isfile('fig/task7_stability_analysis.png')); assert(isfile('fig/task6_rician.png'));
+      - uses: actions/upload-artifact@v4
+        with:
+          name: synthetic-simulation-figures
+          path: fig/*.png
